@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* reset */
+html,body,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,big,cite,code,del,dfn,em,font,img,ins,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,ul,ol,li,dl,dt,dd,table,caption,tbody,tfoot,thead,tr,th,td,fieldset,fo7m,label,legend,input,button,textarea,select{margin:0;padding:0}
+header,footer,section,article,aside,nav,hgroup,details,menu,figure,figcaption{display:block;margin:0;padding:0}
+legend{display:block;overflow:hidden;position:absolute;width:1px;height:1px;font-size:1px;line-height:0;text-indent:-999em;white-space:nowrap; }
+fieldset,img,table,caption,tbody,tfoot,thead,tr,th,td,button,hr{border:0 none}
+img{vertical-align:top}
+body li{*vertical-align:top}
+ul li{list-style:none; padding:0; margin:0;}
+table{border-collapse:collapse}
+caption{visibility:hidden;overflow:hidden;width:0;height:0;font-size:0;line-height:0;}
+button{overflow:visible;border:0 none;cursor:pointer}
+button::-moz-focus-inner,input[type="button"]::-moz-focus-inner,input[type="submit"]::-moz-focus-inner,input[type="reset"]::-moz-focus-inner {padding: 0;border: 0 none}
+body{position:relative;line-height:18px;font-size:12px;font-family:'돋움',Dotum,Tahoma,Verdana,Geneva,Arial,Helvetica,sans-serif; color:#8b8b8b; }
+a { text-decoration:none; color:#666}
+
+body { background:#f2f2f2 }
+
+.gnb ul  { border:1px solidd #ddd; border-left:0; border-top:0;} 
+.gnb ul li { border-bottom:1px solid #ddd; position:relative }
+.gnb ul li a { display:block; height:24px; line-height:24px; color:#222; padding-left:10px; }
+
+#popup { display:none; padding:20px; background:#fff; border-radius:10px;  }
+#popup .b-close { cursor:pointer; border-radius:4px; background:#09C; color:#fff; font-size:15px; position:absolute; right:-5px; top:-5px; padding:7px; }
+
+#popup h1 { font-size:16px; }
+#popup .box { max-width:300px; height:200px; background:#ddd; }
+
+
+.ani_box { position:relative }
+.ani_box p { width:100px; height:100px; position:absolute;  }
+.ani_box .ani01 { background:#066; }
+.ani_box .ani02 { background:#060; }
+.ani_box .ani03 { background:#999; }
+.ani_box .ani04 { background:#960; }
+.table01 td { padding:10px; border:1px solid #ccc }

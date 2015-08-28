@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.bpopup.js"></script>
+</head>
+
+<body>
+<p class="box1" style="position:absolute; left:0; top:0; width:200px; height:200px; background:#099;z-index:100"></p>
+<div id="gnb" class="gnb">
+	<ul>
+		<li><a href="#" id="pop" class="pop1">기본팝업</a></li>
+		<li><a href="#">111</a></li>
+		<li><a href="#">222</a></li>
+		<li><a href="#">333</a></li>
+		<li><a href="#">444</a></li>
+		<li><a href="#">555</a></li>
+		<li><a href="#">666</a></li>
+		<li><a href="#">777</a></li>
+		<li><a href="#">888</a></li>
+		<li><a href="#">999</a></li>
+	</ul>
+</div>
+
+<div class="btn">
+	<p class="txt01">텍스트1</p>
+	<p class="txt02">텍스트2</p>
+	<p class="txt03">텍스트3</p>
+	<p class="txt04">텍스트4</p>
+</div>
+
+
+<table class="table01">
+	<tr>
+		<td>11</td>
+		<td>22</td>
+		<td>33</td>
+		<td>44</td>
+	</tr>
+	<tr>
+		<td>aa</td>
+		<td>bb</td>
+		<td>cc</td>
+		<td>dd</td>
+	</tr>
+</table>
+
+
+<div id="popup">
+	<h1>제목입니다</h1>
+	<div class="box">박스입니다</div>
+	<p class="내용입니다"></p>
+	<span class="b-close">X</span>
+</div>
+<script type="text/javascript">
+	$(function(){
+		// 팝업 실행
+		$('.pop1').bind('click',function(e){
+			e.preventDefault();
+			$('#popup').bPopup({
+				opacity:0.6	
+			});
+		});
+		
+		
+		// 팝업 플러그인
+		var target;
+		$.fn.modal = function(){
+			target = $(this);
+		};
+		
+		$('.pop1').click(function(){
+			$('.gnb').modal();	
+		});
+		
+		$.fn.test = function(){
+			return this.each(function(i,t){
+				alert(i);
+				alert(t.id);
+			});
+		}
+		
+		var car = {
+			speed : 5,
+			gitong : '2000cc',
+			speedUp:function(up){
+				this.speed = this.speed + up;
+			},
+			getSpeed:function(){
+				return this.speed;	
+			}
+		}
+		
+		var key;
+		var dxy = [];
+		$(document).on('keydown', function(e){
+			key = e.keyCode;
+			dxy =	key==38 ? [0,-2]:
+					key==40 ? [0,2]:
+					key==37 ? [-2,0]:
+					key==39 ? [2,0]:
+					[0,0];
+			$('.box1').css({"left":"+="+dxy[0], "top":"+="+dxy[1]});
+		});
+		
+		$('.table01 tr:eq(1) td:gt(0):lt(2)').css('font-weight', 'bold');
+		
+		
+	});
+	 
+</script>
+</body>
+
+
+</html>
